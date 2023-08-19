@@ -1,4 +1,26 @@
-let btn = document.querySelector("#btn")
+const c = document.querySelector("#celsius")
+const f = document.querySelector("#fahrenheit")
+const c2f = document.querySelector("#c2f")
+const f2c = document.querySelector("#f2c")
+
+c2f.addEventListener('click', ()=>{
+    if(c.value == ""){
+        alert("Please enter a value")
+        return
+    }
+    f.value = (c.value * 9/5) + 32
+})
+f2c.addEventListener('click', ()=>{
+    if(f.value == ""){
+        alert("Please enter a value")
+        return
+    }
+    c.value = (f.value - 32) * 5/9
+})
+
+
+
+/*let btn = document.querySelector("#btn")
 let out = document.querySelector("#out")
 
 
@@ -36,7 +58,6 @@ console.log(str1.substr(3,2))
 // concatenation
 console.log(str1 +' '+ str2)
 console.log(str1.concat(' ', str3))
-*/
 
 
 const text = document.querySelector('#text')
@@ -63,3 +84,4 @@ btnFR.addEventListener('click', function(){
     // console.log(output.toLowerCase())
     // console.log(output.toUpperCase())
 })
+*/
